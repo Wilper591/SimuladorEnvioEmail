@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const email = {
         email: '',
-        cc: '',
         asunto: '',
         mensaje: ''
     }
@@ -57,8 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function validar(e) {
         if (e.target.id === 'cc' && !validarEmail(e.target.value)) {
             mostrarAlerta('El email no es válido', e.target.parentElement);
-            email[e.target.name] = '';
-            comprobarEmail();
             return;
         };
         if(e.target.id === 'email' && !validarEmail(e.target.value)) {
